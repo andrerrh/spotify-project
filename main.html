@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Project</title>
+    <link rel="stylesheet" href="./src/assets/css/global.css">
+</head>
+<body>
+    <aside class='aside'>
+        <button class="close-btn">&times</button>
+        <span class='playlists-head'>Your Playlists</span>
+        <ul class="playlists-list"></ul>
+    </aside>
+    <aside class='aside-tracks'>
+        <button class="close-track-btn">&times</button>
+        <span id='tracks-head'class='playlists-head'>Your Playlists</span>
+        <ul class="tracks-list"></ul>
+    </aside>
+    <header>
+        <div class='user'></div>
+    </header>
+    <div class="main-container">
+    </div>
+        <img class="current-song song"></img>
+    <div class="current">
+        <div class='current-info'></div>
+        <div>
+            <input type="range" min="0" class="current-time">
+        </div>
+    </div>
+    <div class="controls">
+        <div class="ctrls-left">
+        </div>
+        <div class="ctrls-center">
+            <button class="back-btn">&#10094</button>
+            <button class="play-pause-btn">&#10074&#10074</button>
+            <button class="next-btn">&#10095</button>
+        </div>
+        <div class="ctrls-right">
+            <input type="range" name="volume" class='volume' min='0' max='100'>
+        </div>
+    </div>
+    <button class='aside-btn'>&#9776</button>
+</body>
+<script src="./src/app.js"></script>
+</html>

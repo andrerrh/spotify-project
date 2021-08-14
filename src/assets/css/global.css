@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+#login-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center
+}
+
+.index-btn {
+    margin-top: 35px;
+    background-color: #1DB954;
+    height: 7vh;
+    width: 21vw;
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 0px;
+    color: white;
+    border-radius: 5px;
+}
+
+.index-btn:hover {
+    background-color: #1aa049;
+    cursor: pointer;
+}
+
+.index-btn:active {
+    background-color: #178a3f;
+}
+
+body {
+    background-color: rgb(231, 231, 231);
+    transition: 0.5s;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    width: 100vw;
+    height: 5vh;
+    background-color: rgb(231, 231, 231);
+}
+
+.aside {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 0px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+    z-index: 1;
+    transition: 0.3s
+}
+
+.aside>*, .aside-tracks>* {
+    padding-top: 10px;
+}
+
+.aside>button:hover, .aside-tracks>button:hover {
+    color: rgb(194, 194, 194);
+}
+
+.aside-btn {
+    color: white;
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    cursor: pointer;
+    text-shadow: 0 0 0.1em black
+}
+
+.aside-btn:hover {
+    color: rgb(129, 129, 129)
+}
+
+.close-btn, .close-track-btn {
+    background-color: transparent;
+    color: white;
+    border: 0px;
+    margin-left: auto;
+    cursor: pointer
+}
+
+.playlists-head, .close-btn, .close-track-btn {
+    font-size: 1.2em;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+.playlists-head {
+    white-space: wrap;
+    cursor: default;
+}
+
+.main-container {
+    position: absolute;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    filter: blur(18px);
+    transform: scale(1.1)
+}
+
+.current-song {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 1em black;
+    width: 20vw;
+    height: 20vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.controls {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 6vh;
+}
+
+.ctrls-center>button {
+    color: rgb(177, 177, 177);
+    background-color: transparent;
+    font-size: 2rem;
+    border: 0;
+    border-radius: 50%;
+    margin: 15px;
+}
+
+.ctrls-center>button:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 1em white
+}
+
+.ctrls-left {
+    width: 7vw;
+}
+
+.volume {
+    -webkit-appearance: none;
+    background-color: #777777;
+    width: 7vw;
+    height: 3px;
+    border-radius: 8px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+ul {
+    padding-left: 0px;
+}
+
+ul>* {
+    list-style-type: none;
+    color: white;
+    font-family: monospace;
+    font-size: 1.2rem;
+    margin: 5px 15px 0px 15px;
+}
+
+ul>*::after {
+    content: '';
+    width: 90%;
+    height: 1px;
+    background-color: rgb(66, 66, 66);
+    color: rgb(66, 66, 66);
+    display: block;
+}
+
+ul>*:hover {
+    list-style-type: none;
+    color: white;
+    text-shadow: 0 0 1em white;
+    background-color: rgb(75, 75, 75);
+    cursor: default;
+}
+
+.aside-tracks {
+    left: 11vw;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 0px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: hidden;
+    z-index: 1;
+    transition: 0.3s
+}
+
+aside::-webkit-scrollbar {
+    display: none;
+}
+
+.current {
+    position: absolute;
+    bottom: 6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.current>* {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.555);
+    width: 100vw;
+    height: 3vh;
+}
+
+.current-info {
+    color: white;
+}
+
+.current-time {
+    -webkit-appearance: none;
+    background-color: #777;
+    width: 50vw;
+    height: 7px;
+    border-radius: 8px;
+}
