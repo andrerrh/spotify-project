@@ -14,6 +14,7 @@ In order to run the project you must
 1. Some functionalities might not work in a non-premium spotify account
 2. The redirect URI must be the same of when you open the index.html, if you're running the file with Live Server for instance, you'll probably get something like
 (http://127.0.0.1:5500/index.html), this is the URI that must be added in the config.js file and in the spotify dashboard whitelist.
+3. Sometimes the spotify dashboard app can take a while to "initialize", so, if you are testing the project with a newly created dashboard app and it's giving a status 400 or 403, that might be the problem
 
 #### Images
 
