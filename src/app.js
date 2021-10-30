@@ -11,7 +11,9 @@ if (window.location.href.includes('index.html')) {
 	}
 	const urlParams = new URLSearchParams(window.location.search)
 	const codeParam = urlParams.get('code')
-	if(codeParam != null) window.location.href = 'main.html'
+	if(codeParam != null) setTimeout(() => {
+		window.location.href = 'main.html'
+	}, 1500)
 }
 
 if (window.location.href.includes('main.html')) {
