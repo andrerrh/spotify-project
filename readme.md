@@ -4,7 +4,7 @@ Some things such as the client id, secret id and redirect uri must be manually s
 and there was no way to hide the "secret values" without a backend server.
 
 In order to run the project you must
-1. please go to https://developer.spotify.com/dashboard/applications and create an application 
+1. go to https://developer.spotify.com/dashboard/applications and create an application 
 2. paste the id's and the redirect uri in the config.js file and add this same URI in the application settings menu
 3. open the folder with a terminal and use npm install to install node_modules dependencies
 4. use npm run dev to "compile" webpack modules
